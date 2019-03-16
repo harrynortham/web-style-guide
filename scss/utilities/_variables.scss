@@ -1,0 +1,20 @@
+// Variables --------------------------/
+
+// Colors
+$blue: #51ddfc;
+$green: #63cc82;
+$red: #e4757a;
+$orange: #fd7856;
+$purple: #927bc1;
+
+$green-light: lighten($green,10%);
+
+$font-color-primary: #555;
+
+// Fonts
+$font-stack-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Breakpoints
+$break-s: 480px;
+$break-m: 768px;
+$break-l: 1024px;
