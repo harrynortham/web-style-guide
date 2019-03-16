@@ -4,9 +4,10 @@
 // **************************************
 
 
-// NOTE: import utilities and base partials here:
+// import utilities and base partials here:
 
 
-
-// import components partials
-@import 'components';
+// import  partials
+@import 'utilities',
+        'base',
+        'components';
