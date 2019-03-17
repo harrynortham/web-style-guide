@@ -1,45 +1,13 @@
-%btn{
-  color: white;
-  display: block;
-  width: 100%;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.75em 1.5em;
-  border-radius: 0.35em;
-  margin-bottom: 20px;
-  cursor: pointer;
-  border: none;
-  font-size: 1em;
-
-  &:hover{
-    color: white;
-    opacity: 0.8;
-  }
-  &:active{
-    opacity: initial;
+#buttons + .grid__row > .grid__col--12{
+  @include flexy($dir:column);
+  @include  mq('m') {
+    @include flexy($dir:row,$just:space-around);
   }
 }
 
-.btn {
-  &--default {
+@each $key, $color in $btn-colors {
+  .btn--#{$key} {
     @extend %btn;
-    background-color: #51ddfc;
-  }
-  &--success {
-    @extend %btn;
-    background-color: #63cc82;
-  }
-  &--error {
-    @extend %btn;
-    background-color: #e4757a;
-  }
-  &--warning {
-    @extend %btn;
-    background-color: #fd7856;
-  }
-  &--info {
-    @extend %btn;
-    background-color: #927bc1;
+    background-color: #{$color};
   }
 }

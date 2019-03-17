@@ -6,19 +6,24 @@
 // but additional styling may be needed
 // **********************************************
 
+.container{
+  padding: 0 $gutter-sm;
+    @include  mq('m') {
+      max-width: 960px;
+      margin: auto;
+    }
+}
 
 // grid base class
 .grid {
 
   // .grid__row
   &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
+    padding: 1em 0;
+    @include flexy($dir:column);
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      flex-direction: row;
+    @include  mq('m') {
+      @include flexy($dir:row);
     }
   }
 
@@ -33,14 +38,13 @@
       // selector would be .grid__col--1
       &--#{$i} {
 
-        // base styles applied to all grid columns 
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
-        margin-top: 10px;
+        margin-top: $gutter-sm;
         flex-basis: 100%;
 
-        // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+        @include  mq('m') {
 
           // base stlyes applied to all grid columns
           margin-top: 0;
@@ -58,11 +62,27 @@
   // grid__col + grid__col, targets two sibling columns
   & + & {
 
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-
-      // add grid gutter
-      margin-left: 10px;
+    @include  mq('m') {
+      margin-left: $gutter-sm;
     }
+  }
+
+}
+
+// Grid theme colors
+
+@each $key, $color in $grid-colors {
+  .theme__colors.grid__col--#{$key} {
+    background-color: #{$color};
+    border-radius: 5px;
+    padding:5px;
+  }
+}
+.theme__colors{
+  &.centered{
+    margin: 0 auto;
+  }
+  @include  mq('m') {
+    text-align: center;
   }
 }

@@ -1,11 +1,17 @@
 *{
   font-family: $font-stack-primary;
   color: $font-color-primary;
+  box-sizing: border-box;
+  line-height: 1.5em;
+}
+
+p {
+  text-align: justify;
 }
 
 a {
   text-decoration: none;
-  color: $blue;
+  color: $color-secondary;
   &:hover {
     text-decoration: underline;
   }

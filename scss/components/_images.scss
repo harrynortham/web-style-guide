@@ -1,16 +1,17 @@
-
 .img {
   &--logo {
-
-
+    @extend %img;
+    margin-bottom: $gutter-m;
   }
   &--frame {
-
+    @extend %img;
     border:1px solid #ccc;
-    padding:10px;
+    padding: $gutter-sm;
+    width: 100%;
+    max-width: 410px;
   }
   &--avatar {
-
-
+    @extend %img;
+    margin: $gutter-m auto;
   }
 }

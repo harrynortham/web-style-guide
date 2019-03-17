@@ -2,19 +2,23 @@
   list-style-type: none;
   padding:0;
   margin: 0;
+  @include flexy($dir:column);
   &__item{
-    display: flex;
-    flex-direction: column;
     a{
       color: $font-color-primary;
       display: block;
-      padding: 15px;
+      padding: 10px 15px;
       text-align: center;
+      border-radius: 5px;
     }
     a:hover{
        color:white;
        text-decoration: none;
-       background-color: $green-light;
+       background-color: $color-primary;
     }
+  }
+  @include  mq('m') {
+    @include flexy($dir:row,$just:space-around);
+    margin: 1.4em 0;
   }
 }

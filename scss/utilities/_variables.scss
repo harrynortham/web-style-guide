@@ -1,20 +1,53 @@
 // Variables --------------------------/
 
 // Colors
+$color-primary: #58e1c1;
+$color-secondary: #51ddfc;
+$font-color-primary: #818181;
+$font-color-secondary: #777;
+$teal: #51ddfc;
 $blue: #51ddfc;
+$blue-light: lighten($blue,10%);
+$blue-dark: darken($blue,25%);
 $green: #63cc82;
-$red: #e4757a;
-$orange: #fd7856;
-$purple: #927bc1;
-
 $green-light: lighten($green,10%);
-
-$font-color-primary: #555;
+$red: #e4757a;
+$red-light: lighten($red,10%);
+$orange: #fd7856;
+$orange-light: lighten($orange,10%);
+$purple: #927bc1;
+$purple-light: lighten($purple,15%);
 
 // Fonts
 $font-stack-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// Breakpoints
-$break-s: 480px;
-$break-m: 768px;
-$break-l: 1024px;
+// Gutters
+$gutter-sm: 10px;
+$gutter-m: 20px;
+
+// Buttons map
+$btn-colors: (
+  default: $blue,
+  success: $green,
+  error: $red,
+  warning: $orange,
+  info: $purple,
+);
+
+// Breakpoints map
+$breakpoints: (
+  'sm': 480px,
+  'm': 768px,
+  'l': 1024px,
+);
+
+// Grid map
+$grid-colors: (
+  12: $teal,
+  6: $blue-dark,
+  4: $blue,
+  3: $purple-light,
+  5: $green-light,
+  7: $red-light,
+  8: $orange-light,
+);
