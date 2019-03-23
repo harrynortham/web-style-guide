@@ -11,14 +11,15 @@
       text-align: center;
       border-radius: 5px;
     }
-    a:hover{
+    a:hover,
+    &:first-child a{
        color:white;
        text-decoration: none;
        background-color: $color-primary;
     }
   }
   @include  mq('m') {
-    @include flexy($dir:row,$just:space-around);
+    @include flexy($dir:row,$just:center);
     margin: 1.4em 0;
   }
 }

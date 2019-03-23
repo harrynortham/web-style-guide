@@ -1,3 +1,5 @@
+
+
 .form {
   &__label--hidden {
     display: none;
@@ -8,7 +10,7 @@
     margin: 0 auto $gutter-m;
     display: block;
     padding: $gutter-sm;
-    border: none;
+    border: 0;
     border-bottom: 5px solid $color-primary;
   }
 

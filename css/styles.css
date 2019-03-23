@@ -365,20 +365,28 @@ template {
 
 * {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #818181;
   box-sizing: border-box;
-  line-height: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 p {
+  line-height: 1.5em;
   text-align: justify;
+  font-size: 1.1em;
 }
 
-a {
+.container {
+  color: #818181;
+}
+.container a {
   text-decoration: none;
   color: #51ddfc;
 }
-a:hover {
+.container a:hover {
   text-decoration: underline;
 }
 
@@ -572,8 +580,10 @@ a:hover {
   padding: 5px;
 }
 
-.theme__colors.centered {
-  margin: 0 auto;
+@media (min-width: 768px) {
+  .theme__colors.centered {
+    margin: 0 auto;
+  }
 }
 @media (min-width: 768px) {
   .theme__colors {
@@ -591,13 +601,13 @@ a:hover {
   font-weight: normal;
 }
 
-blockquote {
+.container blockquote {
   border-left: 6px solid #58e1c1;
+  font-size: 1.2em;
+  font-style: italic;
   border-radius: 5px;
   margin-left: 20px;
   padding-left: 20px;
-  font-style: italic;
-  font-size: 1.2em;
 }
 
 .img--logo {
@@ -621,7 +631,7 @@ blockquote {
   margin: 0 auto 20px;
   display: block;
   padding: 10px;
-  border: none;
+  border: 0;
   border-bottom: 5px solid #58e1c1;
 }
 .form .btn--default {
@@ -674,7 +684,7 @@ blockquote {
   text-align: center;
   border-radius: 5px;
 }
-.nav__item a:hover {
+.nav__item a:hover, .nav__item:first-child a {
   color: white;
   text-decoration: none;
   background-color: #58e1c1;
@@ -683,7 +693,7 @@ blockquote {
   .nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1.4em 0;
   }
 }

@@ -80,7 +80,9 @@
 }
 .theme__colors{
   &.centered{
+    @include  mq('m') {
     margin: 0 auto;
+  }
   }
   @include  mq('m') {
     text-align: center;

@@ -1,18 +1,26 @@
 *{
   font-family: $font-stack-primary;
-  color: $font-color-primary;
   box-sizing: border-box;
-  line-height: 1.5em;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0;
 }
 
 p {
+  line-height: 1.5em;
   text-align: justify;
+  font-size: 1.1em;
 }
 
-a {
-  text-decoration: none;
-  color: $color-secondary;
-  &:hover {
-    text-decoration: underline;
+.container{
+  color: $font-color-primary;
+  a {
+    text-decoration: none;
+    color: $color-secondary;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
